@@ -1,4 +1,4 @@
-package com.lexshpin.MovieReviews;
+package com.lexshpin.MovieReviews.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,7 @@
-package com.lexshpin.MovieReviews;
+package com.lexshpin.MovieReviews.controller;
 
-import org.bson.types.ObjectId;
+import com.lexshpin.MovieReviews.service.MovieService;
+import com.lexshpin.MovieReviews.model.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ import java.util.Optional;
 public class MovieController {
   @Autowired
   private MovieService movieService;
-  @GetMapping
+  @GetMapping("/")
   public ResponseEntity<List<Movie>> getAllMovies(){
     return new ResponseEntity<List<Movie>>(movieService.allMovies(), HttpStatus.OK);
   }
